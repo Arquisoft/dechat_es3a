@@ -55,29 +55,13 @@ Una tabla con metas de calidad y escenarios concretos, ordenados por prioridades
 
 [role="arc42help"]
 ****
-.Contenido
-Vista detallada de las partes intersadas del sistema, es decir, toda persona, rol u organización que:
-
-* Debe conocer la arquitectura
-* Debe estar convencida de la arquitectura
-* Tiene que trabajar con la arquitectura o con el código
-* Necesitan la documentación de la arquitectura para su trabajo
-* Intervienen en las decisiones acerca del sistema o su desarrollo 
-
-.Motivación
-Debe conocer a todas las partes involucradas en el desarrollo del sistema o que son afectadas
-por el sistema. De otro modo, se topará con sorpresas desagradables durante el proceso de desarrollo.
-Estas partes relacionadas o stakeholders determinarán la extensión y el nivel de detalle del trabajo
-y sus resultados
-
-.Forma
-Tabla con nombres de los roles, personas, y sus expectativas con respecto a la arquitectura y su 
-documentación
-****
 
 [options="header",cols="1,2,2"]
 |===
 |Rol/Nombre|Contacto|Expectativas
-| Equipo de desarrollo | _<Contact-1>_ | _<Expectation-1>_
-| _<Role-2>_ | _<Contact-2>_ | _<Expectation-2>_
+| Equipo de desarrollo | Mediante reuniones en las que organizamos el trabajo personal y un control de versiones, en este caso GitHub | Conseguir desarrollar un producto funcional y que siga las necesidades y demandas del cliente
+| Profesor | Hará un seguimiento del desarrollo del proyecto durante los laboratorios, donde también podemos preguntarle dudas. Para la revisión de las versiones definitivas del proyecto, observará como ha ido el desarrollo mediante GitHub, es decir, revisará lo que ha hecho cada uno | Ser un punto de apoyo al equipo de desarrollo, para que este consiga implementar un producto funcional
+| Cliente(Solid) | Hay foros y charlas en las que ellos participan y en las que nosotros podemos consultar dudas, aprender de dudas que hayan tenido otros equipos de desarrollo y entender mejor cual es el producto final que quiere el cliente. | Obtener un producto funcional y que se adecue a los objetivos de calidad que ha establecido con el equipo de desarrollo al principio del proyecto
+| Usuarios | Cuando el producto este acabado, estos podrán valorarlo mediante diferentes canales de comunicación que llegarán a nosotros. Gracias a esto, ellos pueden detectar errores al usarlo que nos podrán notificar y que nosotros podremos corregir | Poder usar un producto final que funcione, que sea fácil de utilizar y que sea útil
 |===
+****
