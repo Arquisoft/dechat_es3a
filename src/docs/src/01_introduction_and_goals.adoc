@@ -37,18 +37,13 @@ relacionados.
 
 [role="arc42help"]
 ****
-.Contenido
-Las tres metas de calidad principales (o hasta cinco) cuyo cumplimiento sea de la mayor importancia para las
-principales partes interesadas. Nos referimos a las metas de calidad para la arquitectura. No confundir
-con las metas del proyecto. No necesariamente son idénticas.
-
-.Motivación
-Debe conocer las metas de calidad de las partes interesadas más importantes, ya que ellos influenciarán
-las decisiones arquitectónicas principales. Asegúrese de ser muy concreto con las descripciones, evitando buzzwords.
-Si como arquitecto no conoce la calidad de su trabajo, será juzgado...
-
-.Forma
-Una tabla con metas de calidad y escenarios concretos, ordenados por prioridades
+[options="header"]
+|===
+| Meta         | Descripción
+| Seguridad y privacidad | Esto es algo básico, ya que si un chat no tiene una buena seguridad ni asegura la privacidad del usuario, los mensajes que envies y tu información puede ser accesible para otras personas. 
+| Usabilidad   | Queremos que el chat sea utilizado por gente acostumbrada a este tipo de aplicaciones y que para la gente que no los suela utilizar, le sea fácil aprender como funciona y sea capaz de utilizarlo
+| 'Responsiveness'(Responder ante una acción)  |  Un chat que tarde mucho tiempo en enviar y recibir mensajes no tendría mucho sentido, por ello nosotros queremos que esta aplicación responda antes un cambio, una acción, o simplemente el envío de un mensaje rápidamente
+|===
 ****
 
 === Partes interesadas (Stakeholders)
