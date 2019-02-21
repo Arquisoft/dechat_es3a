@@ -1,9 +1,18 @@
 [[section-technical-risks]]
 == Riesgos y deuda técnica
 
+****
+|===
+| Riesgo | Explicación
+| Primera vez en un proyecto version web | Hemos trabajado anteriormente en proyectos web de sencilla complejidad y tendremos que buscar más información sobre como trabajan este tipo de páginas
+| Seguridad web | No hemos trabajado nunca en temas de seguridad y menos en páginas web, habrá que estudiar sobre ello
+| Poca experiencia en proyectos en grupo | Trabajamos junto a otros compañeros pocas veces y, además, nos conocemos poco por lo que la comunicación al principio va a ser importante para compenetrarnos más adelante mejor
+| No hemos usado nunca Angular | Al realizar pocos trabajos web, herramientas como Angular no las hemos tocado y por lo que tendremos que buscar más información sobre ello para trabajar
+|  |
+|===
 
 [role="arc42help"]
-****
+
 .Contenido
 Una lista de los riesgos técnicos o deuda técnica identificada, ordenada por prioridad.
 
