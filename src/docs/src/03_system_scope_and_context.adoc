@@ -27,23 +27,22 @@ Forma utilizada:
 
 === Contexto de Negocio
 
-[role="arc42help"]
+
 ****
 .Contenido
-La especificación de *todos* los socios de comunicación (usuarios, sistemas, ...) con explicaciones de las entradas y salidas
-específicas del dominio o interfases.
-Opcionalmente puede agregar formatos específicos de dominio o protocolos de comunicación
+En este diagrama de caja negra se muestra las interfases de dominio a los socios, como se va a realizar la comunicación entre las distintas entitades que van a formar la estructura basica de nuestra aplicacion de DeChat.
+
+image:DiagramaCajaNegra.PNG["Diagrama de caja negra"]
+
+Tambien se ha proporcionado una pequeña leyenda de este diagrama para facilitar su compresion en caso de que haya habido alguna duda.
+
+image:LeyendaDiagramaCajaNegra.PNG["Leyenda del diagrama de caja negra"]
 
 .Motivación
 Todas las partes interesadas deben entender que datos son intercambiados con el ambiente del sistema.
 
 .Forma
-Cualquier forma de diagramas que muestren al sistema como una caja negra y especifiquen las interfases de dominio a los
-socios de comunicación.
-
-De manera alternativa (o adicional) se puede utilizar una tabla.
-El título de la tabla es el nombre del sistema, las tres columnas contienen el nombre del socio de comunicación, las
-entradas y las salidas
+He utilizado un diagrama de caja negra.
 ****
 
 **<Diagrama o Tabla>**
