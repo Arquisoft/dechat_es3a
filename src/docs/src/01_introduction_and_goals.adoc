@@ -15,22 +15,7 @@ deben considerar. Entre estas se incluyen:
 
 
 ****
-.Contenido
-Descripción corta de los requerimientos funcionales, motivaciones, extracto (o resumen) de los 
-requerimientos. Ligar a los documentos de requerimientos determinados (Con número de versión e
-información de donde encontrarla). 
-
-.Motivación
-Desde el punto de vista de los usuarios finales un sistema es creado o modificado para
-mejorar el soporte a una actividad de negocio o incrementar su calidad
-
-.Forma
-Descripción corta textual, probablemente en un formato de caso de uso tabular.
-Si existen documentos de requerimientos esta vista debe referir a dichos requerimientos
-
-Mantenga estos extractos tan cortos como sea posible. Encuentre el balance entre la legibilidad y 
-la redundancia de este documento respecto a los documentos de requerimientos que se encuentren 
-relacionados.
+Los requisitos para este proyecto se basan en crear un chat para poder hablar con diferentes personas, estilo WhatsApp o Facebok Messenger, con la diferencia que las conversaciones y otros datos estarán descentralizados. Esto signfica que nuestros datos ya no estarán en los servidores de la aplicación y solo nosotros y a quien demos autorización podrán acceder a nuestros datos. 
 ****
 
 === Metas de Calidad
