@@ -1,7 +1,7 @@
 [[section-building-block-view]]
 
 
-== Vista de Bloques
+= Vista de Bloques
 
 [role="arc42help"]
 ****
