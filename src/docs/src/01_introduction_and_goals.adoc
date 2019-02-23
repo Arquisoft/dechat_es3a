@@ -1,7 +1,7 @@
 [[section-introduction-and-goals]]
 == Introducción y Metas
 
-[role="arc42help"]
+
 ****
 Describe los requerimientos relevantes y las directrices que los arquitectos de software y el equipo de desarrollo
 deben considerar. Entre estas se incluyen:
@@ -13,7 +13,7 @@ deben considerar. Entre estas se incluyen:
 
 === Vista de Requerimientos
 
-[role="arc42help"]
+
 ****
 .Contenido
 Descripción corta de los requerimientos funcionales, motivaciones, extracto (o resumen) de los 
@@ -35,20 +35,20 @@ relacionados.
 
 === Metas de Calidad
 
-[role="arc42help"]
+
 ****
 [options="header"]
 |===
 | Meta         | Descripción
 | Seguridad y privacidad | Esto es algo básico, ya que si un chat no tiene una buena seguridad ni asegura la privacidad del usuario, los mensajes que envies y tu información puede ser accesible para otras personas. 
 | Usabilidad   | Queremos que el chat sea utilizado por gente acostumbrada a este tipo de aplicaciones y que para la gente que no los suela utilizar, le sea fácil aprender como funciona y sea capaz de utilizarlo
-| 'Responsiveness'(Responder ante una acción)  |  Un chat que tarde mucho tiempo en enviar y recibir mensajes no tendría mucho sentido, por ello nosotros queremos que esta aplicación responda antes un cambio, una acción, o simplemente el envío de un mensaje rápidamente
+| Responsiveness(Responder ante una acción)  |  Un chat que tarde mucho tiempo en enviar y recibir mensajes no tendría mucho sentido, por ello nosotros queremos que esta aplicación responda antes un cambio, una acción, o simplemente el envío de un mensaje rápidamente
 |===
 ****
 
 === Partes interesadas (Stakeholders)
 
-[role="arc42help"]
+
 ****
 
 [options="header",cols="1,2,2"]

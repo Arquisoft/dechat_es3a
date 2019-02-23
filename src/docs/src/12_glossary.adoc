@@ -1,7 +1,7 @@
 [[section-glossary]]
 == Glosario
 
-[role="arc42help"]
+
 
 
 [options="header"]
