@@ -2,25 +2,25 @@
 == Alcance y Contexto del Sistema
 
 
-[role="arc42help"]
+
 ****
 .Contenido
-El alcance y contexto del sistema - como lo sugiere el nombre - delimita al sistema (es decir, el alcance) de todos sus
-socios de comunicación (Usuarios y sistemas vecinos, es decir, el contexto del sistema). 
-System scope and context - as the name suggests - delimits your system (i.e. your scope) from all its communication partners
-(neighboring systems and users, i.e. the context of your system). Con ello se especifican las interfaces externas.
-
-Si es necesario, diferenciar el contexto de negocio (Entradas y salidas específicas del dominio) del contexto técnico
-(canales, protocolos, hardware).
+|==================================================
+|Socios de comunicacion | Entendimiento
+|Clientes | Interactuan de forma normal con la aplicacion de DeChat, conversando con otras personas, mandando imagenes etc.
+|DeChat | Una vez que el cliente envia un mensaje, imagen o similar, se iniciara una "comunicación" con el POD personal de ese cliente, mediante la libreria "solid-auth-client", para guardar en ese POD el mensaje y posteriormente enviar un enlace al otro cliente con el que se esta manteniendo una conversacion de ese mensaje que acaba de enviar concediendole permiso para ver SOLO ese mensaje. Pero siempre manteniendo ese mensaje en el POD personal del primer cliente, esto es lo que se consigue con descentralizacion.
+Seria tambien factible que alguno de los clientes tuviese varios POD y distribuyera los datos entre ellos en cualquier caso el funcionamiento seguiria siendo el mismo, solamente aumenta la descentralizacion.
+|POD | Son almacenes de datos personas en linea y va a estar alojado donde el usuario lo estime oportuno.
+Aqui es donde van a estar almacenados toda la informacion, mensajes, etc. Que haya comunicado el cliente con la aplicacion de DeChat.
+|==================================================
 
 .Motivación
 Las interfases de dominio y las interfases técnicas a los socios de comunicación son de los aspectos más críticos del sistema.
 Se debe asegurar el entendimiento de ellos.
 
 .Forma
-Varias opciones:
+Forma utilizada:
 
-* Diagramas de contexto
 * Listas de socios de comunicación y sus interfases.
 ****
 
