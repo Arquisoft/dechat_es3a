@@ -36,17 +36,17 @@ internas.
 
 === Sistema General de Caja Blanca
 
-image:Caja_blanca.png["Vista general"]
+image:../images/Caja_blanca.png["Vista general"]
 
 Motivación::
-Este diagrama representa la vista más global del chat
+Este diagrama representa la vista más global del proyecto
 
 Bloques de construcción contenidos::
 [cols="1,2" options="header"]
 |===
 | **Nombre** | **Responsabilidad**
 | Persona | Usuario usando el chat
-| POD | Referenciar a descripcion en glossary
+| POD | Desc. en el glosario.
 | Dechat | Aplicación (chat)
 |===
 
