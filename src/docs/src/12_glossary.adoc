@@ -8,5 +8,5 @@
 |===
 | Término         | Definición
 | Responsiveness     | En español no encontre una palabra que defina correctamente esta meta, pero su traducción quiere decir que, en este caso el chat, responda ante una acción o que sea sensible a ella
-| POD     | POD simula ser una base de datos personal en la que cada uno guarda sus datos y para que las aplicaciones accedan a estos datos, debe ser el propietario del POD el que les de permiso. Puedes ser propietario de este POD o usar uno que proporcione alguna compañia.
+| POD     | POD simula ser una base de datos personal en la que cada uno guarda sus datos y para que las aplicaciones accedan a estos datos, debe ser el propietario del POD el que les de permiso. Puedes ser propietario de este POD o usar uno que proporcione alguna compañia. https://solid.inrupt.com/how-it-works
 |===

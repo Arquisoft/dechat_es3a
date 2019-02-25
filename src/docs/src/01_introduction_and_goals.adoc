@@ -1,16 +1,6 @@
 [[section-introduction-and-goals]]
 == Introducción y Metas
 
-
-****
-Describe los requerimientos relevantes y las directrices que los arquitectos de software y el equipo de desarrollo
-deben considerar. Entre estas se incluyen:
-
-* Objetivos empresariales subyacentes, características esenciales y requerimientos funcionales para el sistema
-* Metas de calidad para la arquitectura
-* Las partes interesadas pertinentes y sus expectativas
-****
-
 === Vista de Requerimientos
 
 
