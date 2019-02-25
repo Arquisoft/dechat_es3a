@@ -4,7 +4,7 @@
 
 
 ****
-.Contenido
+[options="header"]
 |==================================================
 |Socios de comunicacion | Entendimiento
 |Clientes | Interactuan de forma normal con la aplicacion de DeChat, conversando con otras personas, mandando imagenes etc.
@@ -13,6 +13,7 @@ Sería también factible que alguno de los clientes tuviese varios POD y distrib
 |POD | Son almacenes de datos personales en linea y va a estar alojado donde el usuario lo estime oportuno.
 Aqui es donde van a estar almacenados toda la informacion, mensajes, etc. Que haya comunicado el cliente con la aplicacion de DeChat. Su función principal será separar la aplicación y los datos.
 |==================================================
+
 
 .Motivación
 Las interfases de dominio y las interfases técnicas a los socios de comunicación son de los aspectos más críticos del sistema.
@@ -28,7 +29,7 @@ Se debe asegurar el entendimiento de ellos.
 
 
 ****
-.Contenido
+
 En este diagrama de caja negra se muestra las interfases de dominio a los socios y como se va a realizar la comunicación entre las distintas entitades que van a formar la estructura basica de nuestra aplicacion de DeChat. No se explicará su funcionamiento interno, para ello se realizaran otros diagramas en siguientes apartados como el "Diagrama de caja blanca".
 
 image:../images/DiagramaCajaNegra.PNG["Diagrama de caja negra"]
@@ -37,33 +38,17 @@ Tambien se ha proporcionado una pequeña leyenda de este diagrama para facilitar
 
 image:../images/LeyendaDiagramaCajaNegra.PNG["Leyenda del diagrama de caja negra"]
 
-.Motivación
+
 Todas las partes interesadas deben entender que datos son intercambiados con el ambiente del sistema.
 
-.Forma
+
 He utilizado un diagrama de caja negra.
 ****
 
 === Contexto Técnico
 
-[role="arc42help"]
-****
-.Contenido
-Las interfases técnicas (medios de transmisión y canales) enlanzando al sistema con su ambiente. De manera adicional
-el mapeo de las entradas/salidas específicas del dominio a los canales, es decir, una explicación acerca de que entrada/salida
-utiliza cual canal.
 
-.Motivación
-Muchas partes relacionadas realizan decisiones arquitectónicas basadas en las interfases técnicas entre el sistema y 
-su contexto. Especialmente los diseñadores de infraestructura o hardware deciden estas interfases técnicas.
-
-.Forma
-Por ejemplo, diagramas UML de despligue describiendo los canales a sistemas vecinos, junto con una tabla de 
-mapeo mostrando las relaciones entre los canales y las entradas/salidas.
 ****
 
-**<Diagrama o Tabla>**
+****
 
-**<Opcional: Explicación de las interfases técnicas>**
-
-**<Mapeo de Entrada/Salida a canales>**
