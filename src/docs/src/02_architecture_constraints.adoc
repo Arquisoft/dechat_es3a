@@ -1,0 +1,19 @@
+[[section-architecture-constraints]]
+== Restricciones de la Arquitectura
+
+****
+
+[options="header",cols="1,2"]
+|===
+| Restricción | Explicación
+| No usar lenguaje técnico | Es un chat para que lo pueda utilizar todas las personas sea cual sea su nivel en la tecnología teniendo, por supuesto, el mínimo conocimiento
+| Chat descentralizado | Debe ser un chat en donde cada usuario sea propietario de sus propios datos
+| Interfaz amigable y estética | Tiene que ser fácil de manejar por el usuario y agradable para la vista para que la persona que lo utilice se canse menos ya sea de la vista o cognitivamente
+| Segura y privada | Algo obvio pero de suma importancia comentar ya que los datos tendrán que estar descentralizados y no podrá nadie verlos 
+| Documentación técnica | Se usará una documentación técnica como es Arc42 ya que es de las mejores para la documentación de arquitectura del software
+| Crear grupos de chat | Se deben poder comunicar entre los usuarios en grupos para que hablen a la vez siempre y cuando
+| Enviar fotos, vídeos u otro tipo de archivos | Los usuarios deben de poder enviarse entre sí cualquier tipo de archivo por el chat para e
+| Tener notificaciones | Se va a poder recibir notificaciones por mensajes recibidos a través del chat
+|===
+
+****
