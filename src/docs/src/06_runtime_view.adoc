@@ -1,2 +1,0 @@
-[[section-runtime-view]]
-== Vista de Ejecución
