@@ -1,7 +1,4 @@
 body {
-  background-image: url("../img/bg-repeat.png");
-  background-repeat: repeat;
-  background-color: ghostwhite;
   color: white;
 }
 
@@ -11,7 +8,7 @@ a {
 }
 
 .container {
-  background-color: darkcyan;
+  background-color: #3F1CA0;
   padding-bottom: 20px;
 }
 

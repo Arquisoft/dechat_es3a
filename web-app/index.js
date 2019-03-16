@@ -1,4 +1,3 @@
-const Chessboard = require('../lib/chessboard');
 const {Loader} = require('semantic-chess');
 const auth = require('solid-auth-client');
 const DataSync = require('../lib/datasync');
@@ -9,40 +8,17 @@ const Core = require('../lib/core');
 const WebRTC = require('../lib/webrtc');
 
 let userWebId;
-let semanticGame;
+let semanticChat;
 let dataSync = new DataSync(auth.fetch);
-let board;
+let chat;
 let userDataUrl;
-let oppWebId;
-let gamesToJoin = [];
-let gameName;
+let contactWebId;
+let chatsToJoin = [];
+let chatName;
 let refreshIntervalId;
-let selectedTheme = 'default';
+
 let core = new Core(auth.fetch);
 let webrtc = null;
-
-const fullColor = {
-  'w': 'white',
-  'b': 'black'
-};
-const possibleThemes = {
-  default: {
-    name: 'Classic',
-    pieceTheme: 'web-app/img/chesspieces/wikipedia/{piece}.png',
-    color: {
-      black: '#b58863',
-      white: '#f0d9b5'
-    }
-  },
-  modern: {
-    name: 'Modern',
-    pieceTheme: 'web-app/img/chesspieces/freevector/{piece}.png',
-    color: {
-      black: 'deepskyblue',
-      white: 'lightskyblue'
-    }
-  }
-};
 
 $('.login-btn').click(() => {
   auth.popupLogin({ popupUri: 'popup.html' });
@@ -52,27 +28,7 @@ $('#logout-btn').click(() => {
   auth.logout();
 });
 
-$('#refresh-btn').click(checkForNotifications);
-
-$('#theme-btn').click(() => {
-  const $modalBody = $('#theme-selector .modal-body');
-  $modalBody.empty();
-
-  const keys = Object.keys(possibleThemes);
-
-  keys.forEach(k => {
-    const theme = possibleThemes[k];
-
-    const $radio = `<div class="form-check">
-                <input type="radio" class="form-check-input" name="theme" id="${k}-theme" value="${k}" ${k === selectedTheme ? 'checked' : ''}>
-                <label class="form-check-label" for="${k}-theme">${theme.name}</label>
-              </div>`;
-
-    $modalBody.append($radio);
-  });
-
-  $('#theme-selector').modal('show');
-});
+$('#refresh-btn').click(checkForNotifications); //no hay ningun refresh button en el html, se quitaria
 
 $('#save-theme-btn').click(() => {
   const newTheme = $('input[name="theme"]:checked').val();
@@ -92,7 +48,7 @@ $('#save-theme-btn').click(() => {
  * This method does the necessary updates of the UI when the different game options are shown.
  */
 function setUpForEveryGameOption() {
-  $('#game-loading').removeClass('hidden');
+  $('#chat-loading').removeClass('hidden');
   // $('#game').removeClass('hidden');
 }
 
@@ -236,13 +192,13 @@ async function setUpBoard(semanticGame) {
     pieceTheme: possibleThemes[selectedTheme].pieceTheme
   };
 
-  board = ChessBoard('board', cfg);
+  board = ChessBoard('chat', cfg);
 
   $('#game').removeClass('hidden');
   $('#game-loading').addClass('hidden');
 
-  $('.black-3c85d').css('background-color', possibleThemes[selectedTheme].color.black);
-  $('.white-1e1d7').css('background-color', possibleThemes[selectedTheme].color.white);
+  /*$('.black-3c85d').css('background-color', possibleThemes[selectedTheme].color.black);
+  $('.white-1e1d7').css('background-color', possibleThemes[selectedTheme].color.white);*/
 
   const oppName = await core.getFormattedName(oppWebId);
 
@@ -280,12 +236,11 @@ auth.trackSession(async session => {
   } else {
     $('#nav-login-btn').removeClass('hidden');
     $('#user-menu').addClass('hidden');
-    $('#game').addClass('hidden');
-    $('#new-game-options').addClass('hidden');
-    $('#join-game-options').addClass('hidden');
-    $('#continue-game-options').addClass('hidden');
-    $('#game-options').removeClass('hidden');
-    $('#how-it-works').removeClass('hidden');
+    $('#chat').addClass('hidden');
+    $('#new-chat-options').addClass('hidden');
+    $('#join-chat-options').addClass('hidden');
+    $('#continue-chat-options').addClass('hidden');
+    $('#chat-options').removeClass('hidden');
     userWebId = null;
     semanticGame = null;
     board = null;
@@ -298,8 +253,7 @@ auth.trackSession(async session => {
  * This method updates the UI after a game option has been selected by the player.
  */
 function afterGameOption() {
-  $('#game-options').addClass('hidden');
-  $('#how-it-works').addClass('hidden');
+  $('#chat-options').addClass('hidden');
 }
 
 function afterGameSpecificOptions() {
@@ -308,7 +262,7 @@ function afterGameSpecificOptions() {
 $('#new-btn').click(async () => {
   if (userWebId) {
     afterGameOption();
-    $('#new-game-options').removeClass('hidden');
+    $('#new-chat-options').removeClass('hidden');
     $('#data-url').prop('value', core.getDefaultDataUrl(userWebId));
 
     const $select = $('#possible-opps');
@@ -327,7 +281,7 @@ $('#start-new-game-btn').click(async () => {
   const dataUrl = $('#data-url').val();
 
   if (await core.writePermission(dataUrl, dataSync)) {
-    $('#new-game-options').addClass('hidden');
+    $('#new-chat-options').addClass('hidden');
     oppWebId = $('#possible-opps').val();
     userDataUrl = dataUrl;
     gameName = $('#game-name').val();
@@ -342,7 +296,7 @@ $('#start-new-game-btn').click(async () => {
 $('#join-btn').click(async () => {
   if (userWebId) {
     afterGameOption();
-    $('#join-game-options').removeClass('hidden');
+    $('#join-chat-options').removeClass('hidden');
     $('#join-data-url').prop('value', core.getDefaultDataUrl(userWebId));
     $('#join-looking').addClass('hidden');
 
@@ -451,7 +405,7 @@ $('#continue-btn').click(async () => {
 
     const $tbody = $('#continue-game-table tbody');
     $tbody.empty();
-    $('#continue-game-options').removeClass('hidden');
+    $('#continue-chat-options').removeClass('hidden');
 
     const games = await core.getGamesToContinue(userWebId);
 
@@ -506,8 +460,8 @@ $('#continue-btn').click(async () => {
   }
 });
 
-$('#continue-game-btn').click(async () => {
-  $('#continue-game-options').addClass('hidden');
+$('#continue-chat-btn').click(async () => {
+  $('#continue-chat-options').addClass('hidden');
   const games = await core.getGamesToContinue(userWebId);
   const selectedGame = $('#continue-game-urls').val();
   let i = 0;
